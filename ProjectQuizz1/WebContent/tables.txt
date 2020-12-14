@@ -1,0 +1,79 @@
+<!-- 
+create table PYTHON1(
+  id number not null primary key,
+  question varchar(1000) not null,
+  answer1 varchar(255),
+   answer2 varchar(255),
+    answer3 varchar(255),
+     answer4 varchar(255),
+     right_option varchar(2),
+     comments varchar(1000)
+     );
+     
+ create sequence test_python1_seq start with 1 increment by 1;
+ 
+insert into PYTHON1 values(test_python_seq.nextval,'round(4.576)  What will be the output of this function?', '4', '5', '576', '4.5', 'B', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'Which among them is incorrect for set s={100,101,102,103}', 'Len(s)', 'Sum(s)', 'Print(s[3])', 'Max(s)', 'C', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'Which one of the following is the correct extension of the Python file?', '.py', '.python', '.p', 'None of these', 'A', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'What is the maximum possible length of an identifier?', '16', '32', '64', 'None of these above', 'D', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'Which character is used in Python to make a single line comment?', '/', '//', '#', '!', 'C', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'What is the method inside the class in python language?', 'Object', 'Function', 'Attribute', 'Argument', 'B', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'Which of the following statements is correct for variable names in Python language?', 'All variable names must begin with an underscore', 'Unlimited length', 'The variable name length is a maximum of 2', 'All of the above', 'B', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'Which of the following words cannot be a variable in python language?', '_val', 'Val', 'Try', '_try_', 'C', 'Do not have any comment');
+
+insert into PYTHON1 values(test_python_seq.nextval,'round(4.576)  What will be the output of this function?', '4', '5', '576', '4.5', 'B', 'Do not have any comment');
+insert into PYTHON1 values(test_python_seq.nextval,'Which among them is incorrect for set s={100,101,102,103}', 'Len(s)', 'Sum(s)', 'Print(s[3])', 'Max(s)', 'C', 'Do not have any comment');
+
+ -->
+ <!-- 
+ 
+ create table C(
+  id number not null primary key,
+  question varchar(1000) not null,
+  answer1 varchar(255),
+   answer2 varchar(255),
+    answer3 varchar(255),
+     answer4 varchar(255),
+     right_option varchar(2),
+     comments varchar(1000)
+     );
+     
+ create sequence test_c_seq start with 1 increment by 1; 
+ 
+ insert into C values(test_c_seq.nextval, ' Choose the operator which cannot be overloaded', '/', '()', '::', '%', 'C', 'Do not have any comment');
+insert into C values(test_c_seq.nextval, 'A user defined header file is included by following statement in general.', '#include file.h ', '#include <file.h>', '#include <file>', '#include file.h', 'A', 'Do not have any comment');
+insert into C values(test_c_seq.nextval, 'A protected member of the class in accessible in', 'Only same class', 'Same class and derived class', 'Outside the class', 'None of these', 'B', 'Do not have any comment');
+
+insert into C values(test_c_seq.nextval, 'With respective to streams >> (operator) is called as', 'Insertion operator', 'Extraction operator', 'Right shift operator', 'Left shift operator', 'B', 'Do not have any comment');
+
+insert into C values(test_c_seq.nextval, 'Following is the invalid inclusion of a file to the current program. Identify it', '#include<file>', '#include file ', '#include <file', 'None', 'C', 'Do not have any comment');
+
+insert into C values(test_c_seq.nextval, 'Constant variables can be created in CPP by using', 'enum', 'const', '#define', 'All the these', 'D', 'Do not have any comment');
+
+insert into C values(test_c_seq.nextval, 'Object oriented programming employs which programming approach.', 'top-down', 'procedural', 'bottom-up', 'all of these', 'C', 'Do not have any comment');
+
+insert into C values(test_c_seq.nextval, 'In CPP cin and cout are the predefined stream', 'Operator', 'Functions', 'Objects', 'Data types', 'C', 'Do not have any comment');
+
+insert into C values(test_c_seq.nextval, 'When a class is defined inside any function or block, it is called? ', 'Nested class', 'Block class', 'Local class', 'It is not posible', 'C', 'Do not have any comment');
+ insert into C values(test_c_seq.nextval, 'Which of the followings is/are not keyword/s in CPP?', 'Boolean and constant_cast', 'mutable', 'export', 'None', 'A', 'Do not have any comment');
+ 
+ 
+  -->
+ 
+ 
+ <!-- 
+     Test score table
+ 
+    create table test_score(
+       id number not null primary key, 
+       test_code varchar(100) not null,  (foreign key from test_details table
+       score number not null,
+       user_id number not null       (foreign key from users table
+       );
+       FOREIGN KEY REFERENCES users(id)
+        FOREIGN KEY REFERENCES test_details(id),
+  -->
+ 
+ALTER TABLE test_score
+ADD FOREIGN KEY (test_code) REFERENCES test_details(id);
+ 
